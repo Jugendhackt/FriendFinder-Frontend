@@ -5,72 +5,28 @@
     <title>Friender</title>
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
-    <script src="js/design.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <div class="header" id="myHeader">
         <h2 id="title">Vorschläge:</h2>
         <img id="vorpro" src="images/defaultprofile.png" width="80px" height="80px" align="right" align="top">
+        <button id="op" onclick="getChats()">requests</button>
     </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span onclick="closeModal()" class="close">&times</span>
+            <p>Test</p>
+        </div>
+    </div>
+
+
 
     <div id="Activities">
         <h2 id="acti">Activities</h2>
         <ul id="list">
-            <li>Coffee</li>
-            <li>Team</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
+           <li>Dies ist ein Placeholder</li>
 
         </ul>
 
@@ -81,38 +37,29 @@
     <div id="friends">
         <h2 id="ft">Freunde</h2>
         <ul id="friendlist">
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
-            <li>friend</li>
 
         </ul>
+    </div>
 
+    <div id="chat" onload="getChats()">
+        <div id="messages">
+            <span class="msg-box">
+                <span class="msg-box-header">Erik</span>
+                <span class="msg-box-footer">Dies ist eine Nachricht!</span>
+            </span>
+            <span class="msg-box">
+                <span class="msg-box-header own-message">Tim</span>
+                <span class="msg-box-footer">Dies ist (k)eine Nachricht!</span>
+            </span>
+        </div>
+        <input id="message">
+        <button id="send">></button>
 
 
 
     </div>
 
-
+    <script src="js/design.js"></script>
+    <script src="js/data.js"></script>
 </body>
 </html>

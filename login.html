@@ -3,7 +3,7 @@
         <title>Friender-Login</title>
         <link rel="stylesheet" href="css/login.css">
         <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
-        <script src="js/comunication.js"></script>
+        <script src="js/login.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
@@ -13,10 +13,10 @@
             <div id="loginform">
                 <h1 id="Login">Login</h1>
 
-                <input class="uname" type="text" placeholder="Benutzername" name="uname" required>
-                <input class="pwd" type="password" placeholder="Password" name="pwd" required>
+                <input id="uname" class="uname" type="text" placeholder="Benutzername" name="uname" required>
+                <input id="pwd" class="pwd" type="password" placeholder="Password" name="pwd" required>
 
-                <button class="log">Login</button>
+                <button onclick="getInput()" class="log">Login</button>
 
             </div>
         </div>
