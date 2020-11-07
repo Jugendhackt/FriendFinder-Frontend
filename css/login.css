@@ -1,0 +1,45 @@
+
+body{
+    background-color: #1b1e21;
+}
+
+
+
+
+#FFT{
+    position: absolute;
+    width: 99%;
+    float: left;
+
+
+
+    font-family: Yellowtail;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 140px;
+    line-height: 191px;
+    text-align: center;
+
+    color: rgba(255, 153, 0, 0.75);
+
+    mix-blend-mode: normal;
+}
+
+
+#loginform{
+    position: absolute;
+    width: 50%;
+    height: 49%;
+    float: left;
+    margin-left: 450px;
+    margin-top: 400px;
+    background: #FFFFFF;
+
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 50px 50px;
+}
