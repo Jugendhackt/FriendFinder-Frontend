@@ -45,7 +45,7 @@ body{
     grid-template-rows: 50px 50px;
 }
 
-#Login {
+#Register {
     font-family: Yellowtail;
     position: absolute;
     margin-left: 45%;

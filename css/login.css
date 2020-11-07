@@ -29,11 +29,12 @@ body{
 #loginform{
     position: absolute;
     width: 50%;
-    height: 49%;
+    height: 42%;
     float: left;
     margin-left: 450px;
     margin-top: 400px;
     background: #FFFFFF;
+    border-radius: 50px;
 
 
 }
@@ -45,8 +46,11 @@ body{
 }
 
 #Login {
+    font-family: Yellowtail;
     position: absolute;
     margin-left: 45%;
+    font-size: 40px;
+
 
 }
 
@@ -55,17 +59,53 @@ body{
     margin-left: 38%;
     margin-top: 15%;
     width: 25%;
-    height: 5%;
+    height: 10%;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 50px;
+    background-color: rgba(255, 153, 0, 0.75);
 
 
 
  }
 
+.uname:focus {
+    border: 3px solid #555;
+    background-color: lightblue;
+}
+
 
 .pwd {
     position: absolute;
     margin-left: 38%;
-    margin-top: 20%;
+    margin-top: 25%;
     width: 25%;
-    height: 5%;
+    height: 10%;
+    box-sizing: border-box;
+    background-color: rgba(255, 153, 0, 0.75);
+    border: 2px solid;
+    border-radius: 50px;
+}
+
+.pwd:focus {
+    background-color: lightblue;
+    border: 3px solid #555;
+}
+
+.log {
+    position: absolute;
+    margin-left: 35.5%;
+    margin-top: 33%;
+    width: 30%;
+    height: 10%;
+    background-color: rgba(255, 153, 0, 0.75);
+    border: 2px solid;
+    border-radius: 50px;
+}
+.log:hover {
+    background-color: #0dcaf0;
+    border: 3px solid #555;
+}
+.log:focus {
+    background-color: green;
 }
