@@ -43,3 +43,29 @@ body{
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: 50px 50px;
 }
+
+#Login {
+    position: absolute;
+    margin-left: 45%;
+
+}
+
+.uname {
+    position: absolute;
+    margin-left: 38%;
+    margin-top: 15%;
+    width: 25%;
+    height: 5%;
+
+
+
+ }
+
+
+.pwd {
+    position: absolute;
+    margin-left: 38%;
+    margin-top: 20%;
+    width: 25%;
+    height: 5%;
+}
