@@ -1,0 +1,42 @@
+body {
+    background-color: #1b1e21;
+
+
+}
+
+.header {
+    padding: 10px 20px;
+    background: #555;
+    color: #f1f1f1;
+}
+
+.content {
+    padding: 16px;
+}
+
+#title {
+    font-family: Yellowtail;
+    font-size: 60px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+#vorpro {
+position: absolute;
+left: 350px;
+top: 75px;
+
+}
+#Activities {
+    position: absolute;
+    width: 20%;
+    height: 78%;
+
+}
+#Activities:hover {
+    border: 2px solid #FF7A00;
+}
