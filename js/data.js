@@ -1,4 +1,4 @@
-var token = document.cookie;
+var token = getCookie("token");
 
 var ws = new WebSocket("ws://tallerik.myddns.me:8080", 'echo-protocol')
 var current_chat;
@@ -19,13 +19,13 @@ input.addEventListener("keyup", function(event) {
 });
 
 
-
-
-
-
-
 ws.onmessage = function(ctx) {
     var resp = JSON.parse(ctx.data);
+
+    if(resp.code === "TOKEN_INVALID") {
+        document.location = "login.html";
+    }
+
     if(resp.request === "newmessage") {
         if(resp.room.id !== current_chat) {
             return;
@@ -138,6 +138,7 @@ function sendMessage() {
     }
 }
 ws.onopen = function () {
+    ws.send(JSON.stringify({"request": "session", "token": token}))
     getChats();
 }
 
@@ -145,11 +146,25 @@ function logout() {
 
     ws.send(JSON.stringify({"request": "logout", "token": token }))
     window.location = "login.html"
-    document.cookie = " ";
+    document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 }
 
 
-
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
 
 
 

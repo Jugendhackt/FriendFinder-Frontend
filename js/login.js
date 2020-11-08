@@ -8,8 +8,8 @@ ws.onmessage = function(ctx) {
         if(resp.token !== undefined) {
             token = resp.token;
 
-            document.cookie = token
-            window.location = "index.html"
+            document.cookie = "token=" +token;
+            window.location = "index.html";
         }
     } else {
         // Meldung das nicht erfolgreich
