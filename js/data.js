@@ -3,7 +3,7 @@ var token = getCookie("token");
 var ws = new WebSocket("ws://tallerik.myddns.me:8080", 'echo-protocol')
 var current_chat;
 
-
+var knownMessages = []
 
 var input = document.getElementById("message");
 
@@ -30,6 +30,9 @@ ws.onmessage = function(ctx) {
         if(resp.room.id !== current_chat) {
             return;
         }
+        if(knownMessages.includes(resp.randomID)) {
+            return;
+        }
 
         let own = resp.sender === resp.name;
         var box = document.createElement("span");
@@ -49,10 +52,11 @@ ws.onmessage = function(ctx) {
         box.appendChild(footer);
         document.getElementById("messages").appendChild(box);
         document.getElementById("messages").scrollBy(0, box.offsetHeight + 10);
-
+        knownMessages.push(resp.randomID);
+        /*
         if(resp.text === "!clear") {
             document.getElementById("messages").innerHTML = "";
-        }
+        }*/
 
     }
     if (resp.response === "successful") {
@@ -76,6 +80,7 @@ ws.onmessage = function(ctx) {
                 msgs = resp.data // List of all Messages
 
                 document.getElementById("messages").innerHTML = ""; // Clear all Messages shown
+                knownMessages = []
                 for (let messageid in msgs) {
                     let message = msgs[messageid];
                     let own = message.sender === resp.name;
@@ -98,6 +103,7 @@ ws.onmessage = function(ctx) {
                     document.getElementById("messages").appendChild(box);
                     document.getElementById("messages").scrollBy(0, box.offsetHeight + 10);
 
+                    knownMessages.push(message.randomID);
                 }
             }
 
