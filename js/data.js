@@ -50,6 +50,9 @@ ws.onmessage = function(ctx) {
         document.getElementById("messages").appendChild(box);
         document.getElementById("messages").scrollBy(0, box.offsetHeight + 10);
 
+        if(resp.text === "!clear") {
+            document.getElementById("messages").innerHTML = "";
+        }
 
     }
     if (resp.response === "successful") {
