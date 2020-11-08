@@ -10,8 +10,9 @@
 <body>
     <div class="header" id="myHeader">
         <h2 id="title">Vorschläge:</h2>
+        <button id="logout" onclick="logout()">Logout</button>
         <img id="vorpro" src="images/defaultprofile.png" width="80px" height="80px" align="right" align="top">
-        <button id="op" onclick="getChats()">requests</button>
+        <button hidden id="op" onclick="getChats()">requests</button>
     </div>
 
     <div id="myModal" class="modal">
@@ -28,6 +29,7 @@
         <ul id="list">
            <li>Dies ist ein Placeholder</li>
 
+
         </ul>
 
 
@@ -42,18 +44,18 @@
     </div>
 
     <div id="chat" onload="getChats()">
-        <div id="messages">
+        <div id="messages"><!--
             <span class="msg-box">
                 <span class="msg-box-header">Erik</span>
                 <span class="msg-box-footer">Dies ist eine Nachricht!</span>
             </span>
             <span class="msg-box">
                 <span class="msg-box-header own-message">Tim</span>
-                <span class="msg-box-footer">Dies ist (k)eine Nachricht!</span>
-            </span>
+                <span class="msg-box-footer own-text">Dies ist (k)eine Nachricht!</span>
+            </span>-->
         </div>
-        <input id="message">
-        <button id="send">></button>
+        <input id="message" type="text" disabled>
+        <button id="send" onclick="sendMessage()" disabled>></button>
 
 
 

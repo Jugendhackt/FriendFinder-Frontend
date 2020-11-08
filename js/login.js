@@ -7,7 +7,7 @@ ws.onmessage = function(ctx) {
         // Meldung das erfolgreich
         if(resp.token !== undefined) {
             token = resp.token;
-            alert(token)
+
             document.cookie = token
             window.location = "index.html"
         }

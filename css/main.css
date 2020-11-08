@@ -171,6 +171,7 @@ top: 75px;
     height: 75%;
     top: 20px;
     left: 10%;
+    overflow-y: scroll;
 }
 #messages:hover {
     box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.5);
@@ -212,4 +213,19 @@ top: 75px;
 .own-message {
     color: #20c997;
     text-align: right;
+}
+.own-text {
+     /*color: #20c997;*/
+     text-align: right;
+}
+
+#logout {
+    background-color: darkred;
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    height: 4%;
+    width: 4%;
+    border: 2px solid;
+    border-radius: 500%;
 }
