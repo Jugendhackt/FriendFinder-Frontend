@@ -1,5 +1,5 @@
 
-var ws = new WebSocket("ws://pepe44.dev:8080", 'echo-protocol')
+var ws = new WebSocket("ws://89.244.179.207:8080", 'echo-protocol')
 var token;
 ws.onmessage = function(ctx) {
     var resp = JSON.parse(ctx.data);
