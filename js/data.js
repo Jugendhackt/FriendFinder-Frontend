@@ -1,6 +1,6 @@
 var token = getCookie("token");
 
-var ws = new WebSocket("ws://tallerik.myddns.me:8080", 'echo-protocol')
+var ws = new WebSocket("ws://pepe44.dev:8080", 'echo-protocol')
 var current_chat;
 
 var knownMessages = []
